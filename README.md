@@ -19,11 +19,11 @@ Before setting up the system, it is recommended to have familiarity with:
 ## Changes to Establish Connection
 
   1) For Centralized (Hostapd-based) System:
-    (i) Device Name: Update the wlan_x placeholder to your actual device name, such as wlan0, wlan1, etc., depending on whether you are using a built-in Wi-Fi adapter or a USB dongle.
-    (ii) Gateway Setup: While hostapd assigns IP addresses dynamically using DHCP, it is recommended to set a static gateway on each child device to ensure a reliable and automated connection.
+     - Device Name: Update the wlan_x placeholder to your actual device name, such as wlan0, wlan1, etc., depending on whether you are using a built-in Wi-Fi adapter or a USB dongle.
+     -  Gateway Setup: While hostapd assigns IP addresses dynamically using DHCP, it is recommended to set a static gateway on each child device to ensure a reliable and automated connection.
 
   3) For Decentralized System:
-     (i) Netplan Configuration: Edit the netplan.yaml file on each device to assign a static IP address within a chosen IP address family. Select an IP range that fits your application and ensures proper device communication.
+     - Netplan Configuration: Edit the netplan.yaml file on each device to assign a static IP address within a chosen IP address family. Select an IP range that fits your application and ensures proper device communication.
 
 ## Running the Shell Script
   1) Decentralized System:
@@ -32,7 +32,7 @@ Before setting up the system, it is recommended to have familiarity with:
       -   Run the shell script provided in the directory to initialize the decentralized network.
 
   3) Centralized System (Hostapd):
-     (i) Navigate to the Centralized with Hostapd folder.
-     (ii) Edit the hostapd.conf file and the 10-wlan_x_network.txt file accordingly.
-     (iii) Rename the 10-wlan_x_network.txt file as needed and update the corresponding file path in the shell script before execution.
-     (iv) After making all changes, run the shell script to bring up the centralized network.
+     - Navigate to the Centralized with Hostapd folder.
+     - Edit the hostapd.conf file and the 10-wlan_x_network.txt file accordingly.
+     - Rename the 10-wlan_x_network.txt file as needed and update the corresponding file path in the shell script before execution.
+     - After making all changes, run the shell script to bring up the centralized network.
