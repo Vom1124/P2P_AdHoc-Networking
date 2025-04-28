@@ -27,8 +27,8 @@ Before setting up the system, it is recommended to have familiarity with:
 
 ## Running the Shell Script
   1) Decentralized System:
-    *  Navigate to the Ad-Hoc Decentralized folder.
-    * Edit the .yaml file as needed to match your IP configuration.
+*Navigate to the Ad-Hoc Decentralized folder.
+*Edit the .yaml file as needed to match your IP configuration.
     * Run the shell script provided in the directory to initialize the decentralized network.
 
   3) Centralized System (Hostapd):
