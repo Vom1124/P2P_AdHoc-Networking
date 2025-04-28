@@ -1,0 +1,21 @@
+ctrl_interface=DIR=/var/run/wpa_supplicant
+ctrl_interface_group=netdev
+
+update_config=1
+ap_scan=1 # Set it to '1', # Set it to '1', otherwise the driver nl80211 won't work properly.
+
+p2p_disabled=1 # Important to disable this as it is enabled by the wpa_supplicant by default
+
+country=US
+
+network={
+        ssid="Yansa_AdHoc"
+        mode=1 # Need this for IBSS (Ad-Hoc, p2p)
+        frequency=2442 # 2.4 Ghz network, any other choice from the frequency chart comaptible with the device's specs is fine
+        proto=RSN
+        key_mgmt=WPA-PSK
+        pairwise=CCMP
+        group=CCMP
+        #psk="123"
+        psk=5c9e7e922661672b5a39e7f3b39792c6c9935d5fe9a47f3cb41da05a6a941d51
+}

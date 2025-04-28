@@ -1,0 +1,27 @@
+Description=WPA supplicant
+Before=network.target systemd-networkd.service
+#After=dbus.service # Ignored if systemd-networkd is used
+#Ensuring it starts only after the device is available and before the network configuration is applied
+After=sys-subsystem-net-devices-wlan_7.device network-pre.target 
+Wants=network.target
+IgnoreOnIsolate=true
+
+[Service]
+# -u allows DBus IPC (Inter Process Communciation) to control wpa_supplicant, like Networkmanager
+#---- can be ommitted for systemd-networkd as it uses /run/wpa_supplicant as interface to control. 
+#--- Even the Busnames can be disabled as systemd-networkd doesn't use dbus for wpa_supplicant
+# -s sends log to syslog instead of stdout
+# -B starts in the background
+# -i selects he inteface, -c selects the conf. file
+#Type=dbus 
+#BusName=fi.w1.wpa_supplicant1
+
+Type=simple
+ExecStart=/sbin/wpa_supplicant -i wlan_7 -s -c /etc/wpa_supplicant/wpa_supplicant_wifi.conf -D nl80211,wext
+Restart=on-failure
+RestartSec=10
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+#Alias=dbus-fi.w1.wpa_supplicant1.serviced
