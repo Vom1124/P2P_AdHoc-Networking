@@ -1,0 +1,19 @@
+ctrl_interface=DIR=/var/run/wpa_supplicant
+ctrl_interface_group=netdev
+
+update_config=1
+ap_scan=1 # Set it to '1', # Set it to '1', otherwise the driver nl80211 won't work properly.
+
+p2p_disabled=1 # Important to disable this as it is enabled by the wpa_supplicant by default
+
+country=US
+
+network={
+#        ssid="POKKUSQUARE"
+#        psk="Vacf!124-main"
+        ssid="NDSU IOT"
+        psk="plugvoidjiffy"
+        #mode=1 # Need this for IBSS (Ad-Hoc, p2p)
+        #frequency=2442 # 2.4 Ghz network, any other choice from the frequency chart comaptible with the device's specs is fine
+}
+

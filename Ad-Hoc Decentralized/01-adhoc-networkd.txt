@@ -1,0 +1,27 @@
+# Let networkd manage the ip address part of the adhoc
+network:
+  version: 2
+  renderer: networkd
+  
+  ethernets:
+    # This is the EDUP Wi-Fi USB Dongle
+    wlan1:
+      dhcp4: no
+      addresses:
+        - 10.20.1.23/24
+      routes:
+        - to: default
+          via: 10.20.1.24
+  wifis:
+    # This is the built-in Wi-Fi module
+    wlan0:
+      dhcp4: yes
+      dhcp6: no
+      optional: yes
+      access-points:
+#        "NDSU IoT":
+        "TP-Link_824B":
+          password: "52235368"
+#          password: "plugvoidjiffy"
+#        "POKKUSQUARE":
+#          password: "Vacf!124-main"
