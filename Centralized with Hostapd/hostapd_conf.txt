@@ -1,0 +1,10 @@
+interface=wlan_6
+driver=nl80211
+ssid=Husarion_Network
+hw_mode=g
+channel=7
+auth_algs=1
+ieee80211n=1
+ignore_broadcast_ssid=0
+
+

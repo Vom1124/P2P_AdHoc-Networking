@@ -1,0 +1,68 @@
+# Let networkd manage the ip address part of the adhoc
+network:
+  version: 2
+  renderer: networkd
+
+#  ethernets:
+    # This is the EDUP Wi-Fi USB Dongle or whatever device 
+#    wlan1: 
+    #Revert back to wlan1 for the yansa network connectivity and enable the wpa_suuplicant  
+#    wlan0:
+#      dhcp4: no
+#      dhcp6: no
+#      optional: true
+#      addresses:
+#        - 10.10.1.10/24
+#        - 192.168.1.100/24
+#        - 172.25.137.100/24
+#      routes:
+#        - to: 10.10.1.0/24
+#          via: 10.10.1.10
+#      routing-policy:
+#          - from: 10.20.1.0/24
+#          table: 400
+
+  wifis:
+    # This is the built-in Wi-Fi module
+#    wlan0:
+    #Using the EDUP Dongle for better connectivity; revert back to wlan0 for built-in WiFi receiver
+
+#EDUP Dongle
+#----- (Tape Label '#5': xxx.xxx.xxx.105)
+#----- (Tape Label '#6': xxx.xxx.xxx.106)
+#----- (Tape Label '#7': xxx.xxx.xxx.107)
+# Built-In Wifi module "wlan0"
+    wlan0:
+#    wlan_5:
+#    wlan_6:
+#    wlan_7:
+      dhcp4: yes
+      dhcp6: no
+      optional: true
+#      addresses:
+#        - 192.168.0.105/24
+#        - 192.168.0.106/24
+#        - 192.168.0.107/24
+#        - 172.25.137.30/24
+#        - 172.25.137.31/24
+#        - 172.25.137.32/24
+# Routing address is shared ...
+#      routes:
+#        - to: default
+#          via: 192.168.0.1
+#          via: 172.25.137.0
+#          metric: 100
+#      nameservers:
+#          addresses: [8.8.8.8, 8.8.4.4]
+      access-points:
+#        "NDSU IoT":
+#          password: "plugvoidjiffy"
+        "POKKUSQUARE-5G":
+          password: "Vacf!124-main5g"
+
+# Hostapd ap mode
+#    wlan_5:
+#      addresses: [10.10.1.15/24]
+#      dhcp4: no
+#      dhcp6: no
+#      access-points: {}

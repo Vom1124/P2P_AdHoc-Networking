@@ -1,0 +1,11 @@
+[Match]
+Name=wlan_6
+
+[Network]
+Address=10.10.1.10/24
+DHCPServer=yes
+ConfigureWithoutCarrier=yes
+
+[DHCPServer]
+PoolOffset=10
+PoolSize=50
