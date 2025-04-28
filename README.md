@@ -27,11 +27,11 @@ Before setting up the system, it is recommended to have familiarity with:
 
 ## Running the Shell Script
   1) Decentralized System:
-    (i) Navigate to the Ad-Hoc Decentralized folder.
-    (ii) Edit the .yaml file as needed to match your IP configuration.
-    (iii) Run the shell script provided in the directory to initialize the decentralized network.
+    *  Navigate to the Ad-Hoc Decentralized folder.
+    * Edit the .yaml file as needed to match your IP configuration.
+    * Run the shell script provided in the directory to initialize the decentralized network.
 
-  2) Centralized System (Hostapd):
+  3) Centralized System (Hostapd):
      (i) Navigate to the Centralized with Hostapd folder.
      (ii) Edit the hostapd.conf file and the 10-wlan_x_network.txt file accordingly.
      (iii) Rename the 10-wlan_x_network.txt file as needed and update the corresponding file path in the shell script before execution.
