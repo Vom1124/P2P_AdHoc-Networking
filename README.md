@@ -1,5 +1,5 @@
-#P2P_AdHoc-Networking
-## A peer-to-peer (P2P) network architecture enabling direct device-to-device communication without the need for an internet connection. The project implements two separate systems based on Ad Hoc networking principles:
+# P2P_AdHoc-Networking
+#### A peer-to-peer (P2P) network architecture enabling direct device-to-device communication without the need for an internet connection. The project implements two separate systems based on Ad Hoc networking principles:
 
   1)  Centralized System:
 A network is generated using a centralized access point configured with Hostapd. Other devices act as clients, connecting to the centralized system.
