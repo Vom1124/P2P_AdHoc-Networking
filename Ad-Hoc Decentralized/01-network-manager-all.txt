@@ -1,0 +1,87 @@
+network:
+  version: 2
+  renderer: networkd
+
+# *** All networks are managed amd configured my systemd-networkd; 
+# however, the networks are connected using wpa_supplicant
+  ethernets:
+
+#    all-eths:
+#      match:
+#        name: eth*
+#      dhcp4: no
+#      dhcp6: no
+#      optional: true
+#      addresses:
+#        - 192.168.77.2/24
+    wlan7:
+      dhcp4: yes
+#      dhcp6: yes
+#      addresses: [192.168.0.107/24]
+#      addresses: [172.25.178.47/24]
+#      routes:
+#        - to: default
+#          on-link: true
+#          via: 172.25.128.0
+#          metric: 100
+#      nameservers:
+#        addresses:
+#          - 8.8.8.8
+#          - 8.8.4.4
+
+
+    wlan5:
+      dhcp4: no
+#      dhcp6: no
+#      optional: true
+      addresses: [10.10.1.20/24]
+#      routes:
+#        - to: 10.10.1.0/24
+#          via: 10.10.1.20
+#          metric: 600
+#  wifis:
+
+    # standard Wi-Fi config (client)
+    # ========================================
+#EDUP Dongle
+#---- (Tape Label '#5': xxx.xxx.xxx.30)
+#---- (Tape Label '#6': xxx.xxx.xxx.31)
+#---- (Tape Label '#7': xxx.xxx.xxx.32)
+#    wlan_5:
+#    wlan_6:
+#    wlan_7:
+#      dhcp4: yes
+#      dhcp6: yes
+#      optional: true
+#      addresses:
+#        - 172.25.137.30/24
+#        - 172.25.137.31/24
+#        - 172.25.137.327/24
+
+# Routing address is shared ...
+#      routes:
+#        - to: default
+#          via: 172.25.137.0
+#          metric: 100
+#      nameservers:
+#          addresses: [8.8.8.8, 8.8.4.4]
+#      access-points:
+#        "NDSU IoT":
+#          password: "plugvoidjiffy"
+#        "POKKUSQUARE-5G":
+#          password: "Vacf!124-main5g"
+
+
+    # access point Wi-Fi config
+    # ========================================
+    # wlan0: 
+    #   dhcp4: no
+    #   dhcp6: no
+    #   addresses:
+    #     - 192.168.100.1/24
+    #   access-points:
+    #     "rosbotap":
+    #       band: 5GHz
+    #       mode: "ap"
+    #       password: "husarion"
+
